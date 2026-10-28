@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "BB 资料下载助手",
+  "version": "1.1.0",
+  "description": "按课程号扫描资料，下载前核对本地历史，后台下载并保留课程目录层级。",
+  "minimum_chrome_version": "120",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7gDXmBXtvIyp4+wa1DDCmdfaQbT3A28o7FpWLbjpG5uy/XI2kkVmETx7qB4kWQYLe4KyZW3DZ1SoftkedL47PQR9ZqblKn7N2EhY3RmpYSLYI7U7kWq3PYXlx9IN6jwriS+2VNEdEg0J8nzfVlZTMAPGB6c1OeDvwrPp7YoelQIsKOfovOhAgxEo9czzwVHJm9qwFBQDjbPrCc+sxcQUuw/VnPY66H0OU2wG7IX9KPbFBAdoZPLoS98X1Xmrxh99S6wgl5yKFYzdb3TA2Uvv2l58QKNVGkBU0kiC3HyocHYpFb2pH/7Eoifc2qccEpVsLSfI/JE5oAHm1wXPyzNyLwIDAQAB",
+  "permissions": [
+    "downloads",
+    "storage",
+    "nativeMessaging",
+    "offscreen",
+    "scripting",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://bb.cuhk.edu.cn/*"
+  ],
+  "background": {
+    "service_worker": "worker.mjs",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "打开 BB 资料下载助手"
+  }
+}

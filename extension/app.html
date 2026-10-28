@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BB 资料下载助手</title><link rel="stylesheet" href="style.css"></head>
+<body><main>
+<header><div class="brand"><span class="logo">bb</span><div><h1>课程资料，整齐收好。</h1><p>按课程查找 · 下载前核实 · 自动归档</p></div></div><span id="helperStatus" class="pill">正在连接本地助手</span></header>
+<section class="setup">
+<div class="step"><span class="number">1</span><div><h2>告诉我下载什么</h2><p>例如：下载 ENG2001 的 W7，包含视频。只填课号将扫描全课程。</p></div></div>
+<form id="commandForm"><input id="command" aria-label="下载指令" placeholder="下载 ENG2001 的 W7，包含视频" value="下载 ENG2001 的 W7，包含视频" autocomplete="off"><button id="discover" type="submit">查找课程 <span>→</span></button></form>
+<p id="commandHint" class="notice" hidden>指令已修改，请先点击“查找课程”；下方仍是上次结果。</p>
+<div id="courseWrap" hidden><label for="course">匹配课程</label><select id="course"></select></div>
+<div class="destination"><div><span class="eyebrow">保存位置</span><strong id="rootPath">选择已有课程文件夹，或在选择窗口中新建</strong><small>选择课程根文件夹后，资料会按 栏目 / 子文件夹 / 条目标题 存放。</small></div><button id="chooseRoot" class="secondary">选择 / 新建文件夹</button></div>
+<div class="setupBottom"><a href="help.html" target="_blank">首次安装与使用说明 ↗</a><button id="scan" disabled>扫描并检查已有文件</button></div>
+</section>
+<div id="error" class="error" role="alert" hidden></div>
+<section id="results" hidden>
+<div class="sectionHeading"><div><span class="eyebrow">下载预览</span><h2 id="phaseTitle">正在扫描</h2><p id="phaseDetail"></p></div><div id="progressBadge" class="pill"></div></div>
+<div class="metrics"><div><strong id="total">0</strong><span>唯一附件</span></div><div><strong id="newCount">0</strong><span>新增资料</span></div><div><strong id="historyCount">0</strong><span>历史已下载</span></div><div><strong id="reviewCount">0</strong><span>需要核实</span></div></div>
+<div id="structureSummary" class="notice" hidden></div>
+<details id="structurePreview" hidden><summary>查看将保存的课程结构与链接</summary><ul id="structureList"></ul></details>
+<div id="recordsError" class="error" role="alert" hidden></div>
+<div id="warnings" class="notice" hidden></div>
+<div class="toolbar"><label><input type="checkbox" id="onlyActionable"> 只看新增、待核实和失败项</label><div class="actions"><button id="records" class="secondary" hidden>重试更新目录记录</button><button id="retry" class="secondary" hidden>重试失败项</button><button id="pause" class="secondary" hidden>暂停下载</button><button id="resume" hidden>继续下载</button><button id="start" hidden>开始下载</button></div></div>
+<div class="tableWrap"><table><thead><tr><th>文件 / 保存目录</th><th>大小</th><th>检查结果</th><th>本次操作</th></tr></thead><tbody id="files"></tbody></table><p id="empty" hidden>这个范围内没有附件；如有老师分享的链接，仍可保存目录与链接。</p></div>
+<p class="footnote">“已下载”以历史记录为准，改名、移动或编辑不会自动重复下载。首次发现的本地同名文件由你核实。重新下载会另存，保留已有文件。</p>
+<details id="activity"><summary>查看运行记录</summary><ol id="log"></ol></details>
+</section>
+<footer>可以自由切换网页，也可以关闭本面板。后台下载期间请保持 Chrome 运行。<span>BB 资料下载助手 · 1.1</span></footer>
+</main><script type="module" src="app.mjs"></script></body></html>

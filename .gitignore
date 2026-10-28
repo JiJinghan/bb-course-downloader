@@ -1,0 +1,21 @@
+# Local dependencies and generated artifacts
+node_modules/
+dist/
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.env.*
+*.pem
+*.key
+
+# Built locally; included separately in the macOS release asset
+native/folder-picker
+
+# Personal runtime data must never be published
+.bb-downloads/
+_BB_Downloads/
+config.json
+history.json
+catalog.json
+*.crdownload
