@@ -8,7 +8,7 @@
 
 - **下载安装包**：打开[最新版本下载页](https://github.com/JiJinghan/bb-course-downloader/releases/latest)，在 **Assets** 中下载 `BB-Course-Downloader-macOS-1.1.0.zip`。GitHub 自动提供的 `Source code.zip` 不包含预编译目录选择器，普通用户请选择上述安装包。
 - **第一次使用**：[新手指南](docs/QUICKSTART.md)，从检查电脑到第一次补下载。
-- **有 Codex 的同学**：[复制安装提示词](docs/CODEX_INSTALL.md)，让本机 Codex 协助检查、安装并验证。
+- **有 Codex 的同学**：[复制安装提示词](docs/CODEX_INSTALL.md)，让本机 Codex 协助检查、安装并验证。（最简单方法：拉取https://github.com/JiJinghan/bb-course-downloader并教我使用。）
 - **遇到问题**：[排错指南](docs/TROUBLESHOOTING.md)。
 
 这是独立的学生工具，与学校或 Blackboard 官方无隶属关系。它使用你自己 Chrome 的 BB 登录状态；仅分享工具，安装包不含课程附件、账号或个人下载历史。
